@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) st -n mycalc -f "Inconsolata:size=12" -e python -q ;;
+	3) pgrep -x dunst >/dev/null && notify-send "<b>Calculator</b>
+(Really just a REPL)"
+esac
+
+echo '&#xf1ec;'

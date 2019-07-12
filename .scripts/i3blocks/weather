@@ -1,0 +1,12 @@
+#!/bin/sh
+# updates weather forecast
+curl "wttr.in/Cincinnati" -o /tmp/weatherreport
+#qpkill -RTMIN+5 i3blocks && notify-send "Weather forecast updated"
+
+case $BLOCK_BUTTON in
+	1) st -n weather -e less -R /tmp/weatherreport ;;
+	3) pgrep -x dunst >/dev/null && notify-send"<b> Weather Module:</b>
+-Click for wttr.in forecast." ;;
+esac
+
+curl "wttr.in/Cincinnati?format=%c+%t+%w+%m"
