@@ -33,12 +33,6 @@ for_window [instance="volume"] floating enable
 for_window [instance="volume"] move position center
 for_window [instance="volume"] border pixel 5
 
-# 14 points of mindful action
-for_window [instance="mindful"] floating enable
-for_window [instance="mindful"] resize set 1300 600
-for_window [instance="mindful"] move position center
-for_window [instance="mindful"] border pixel 5
-
 # calculator (really just a REPL)
 for_window [instance="mycalc"] floating enable
 for_window [instance="mycalc"] resize 600 300
