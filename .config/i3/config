@@ -94,6 +94,11 @@ bindsym $mod+Shift+q kill
 # open rofi
 bindsym $mod+d exec rofi -show run
 
+# pulsemixer audio controls
+bindsym $mod+Shift+m exec pulsemixer --toggle-mute
+bindsym $mod+Shift+u exec pulsemixer --change-volume +5
+bindsym $mod+Shift+d exec pulsemixer --change-volume -5
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
