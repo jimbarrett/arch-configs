@@ -1,0 +1,6 @@
+#!/bin/sh
+# initiate openvpn connection 
+# accepts config filename
+# eg: vpnconnect configfile (looks for ~/ovpns/configfile.ovpn
+
+sudo openvpn --config ~/ovpns/$1.ovpn
