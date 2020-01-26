@@ -1,9 +1,8 @@
 #!/bin/sh
 
 if [ ! -z "$1" ]; then
-	feh --randomize --bg-fill ~/wallpapers/$1/*
+	feh --randomize --bg-fill ~/.config/wallpapers/$1/*
 else 
-	feh --randomize --bg-fill ~/wallpapers/*
+	feh --randomize --bg-fill ~/.config/wallpapers/*
 fi
 
-#feh --randomize --bg-fill ~/wallpapers/*

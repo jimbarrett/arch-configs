@@ -1,3 +1,0 @@
-#! /bin/sh
-
-printf '%s' "&#xf073; " $(date +%b) " " $(date +%d) ", " $(date +%Y)

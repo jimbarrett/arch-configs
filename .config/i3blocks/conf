@@ -2,25 +2,20 @@ command=~/.scripts/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
-[weather]
-interval=600
-
 [volume]
 interval=once
 signal=10
 instance=Master
 
 [wifi]
-label=&#xf1eb;
+label=Wifi: 
 interval=10
 instance=wlp2s0
 
 [battery]
+label=Bat: 
 instance=1
 interval=30
 
-[date-block]
-interval=1
-
-[time-block]
+[clock]
 interval=1
