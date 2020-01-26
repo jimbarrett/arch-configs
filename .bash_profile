@@ -9,5 +9,5 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 	ssh-add ~/.ssh/*_rsa
 fi
 
-export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
+export PATH="$(du $HOME/.local/bin/ | cut -f2 | tr '\n' ':')$PATH"
 
