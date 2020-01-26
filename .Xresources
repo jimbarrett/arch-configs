@@ -1,4 +1,6 @@
 !! Gruvbox
+*.background: #282828
+*.foreground: #ebdbb2
 *.color0: #282828
 *.color1: #cc241d
 *.color2: #98971a
@@ -14,7 +16,7 @@
 *.color12: #83a598
 *.color13: #d3869b
 *.color14: #8ec07c
-*.color15: #xedbb2
+*.color15: #ebdbb2
 !! Transparency (0-255):
 st.alpha: 230
 !! Set a default font and font size as below:
@@ -32,3 +34,8 @@ rofi.bw: 2
 rofi.padding: 400
 rofi.eh: 1
 rofi.hide-scrollbar: true
+
+xterm*faceName: Inconsolata
+xterm*faceSize: 12
+xterm*loginshell: true
+xterm*termName: xterm-color

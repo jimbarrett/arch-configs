@@ -8,13 +8,15 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-VISUAL=nvim; 
-export VISUAL
-EDITOR=nvmi;
-export EDITOR
+export VISUAL="nvim"
+export WGETRC="$HOME/.config/wget/wgetrc"
 
 # set aliases
 alias nv="nvim"
-alias chrome="google-chrome-stable"
 alias up="sudo pacman -Syu"
 
+[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
