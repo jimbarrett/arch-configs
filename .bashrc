@@ -15,10 +15,9 @@ export WGETRC="$HOME/.config/wget/wgetrc"
 
 # set aliases
 alias nv="nvim"
-alias snv="sudo nvim"
 alias up="sudo pacman -Syu"
 
-#[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
