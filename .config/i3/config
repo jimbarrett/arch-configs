@@ -214,12 +214,12 @@ bar {
 	font pango: mono 9
 	colors {
 			background $color0
-			statusline $color7
-			separator $color7
-			focused_workspace  $color5 $color0 $color5
-        		active_workspace   $color0 $color0 $color5
-      			inactive_workspace $color0 $color0 $color8
-        		urgent_workspace   $color0 $color0 $color8
+			statusline $color12
+			separator $color12
+			focused_workspace  $color12 $color0 $color11
+        		active_workspace   $color0  $color0 $color11
+      			inactive_workspace $color0  $color0 $color3
+        		urgent_workspace   $color0  $color0 $color3
 		}
 	status_command i3blocks -c ~/.config/i3blocks/conf
 	position top
