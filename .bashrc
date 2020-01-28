@@ -17,6 +17,7 @@ export WGETRC="$HOME/.config/wget/wgetrc"
 alias nv="nvim"
 alias up="sudo pacman -Syu"
 
+# transparent xterm windows
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
 export NVM_DIR="$HOME/.nvm"
