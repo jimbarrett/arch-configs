@@ -9,4 +9,5 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 	ssh-add ~/documents/.ssh/*_rsa
 fi
 
+export PATH="$(du $HOME/.config/composer/vendor/bin ':')$PATH"
 export PATH="$(du $HOME/.local/bin/ | cut -f2 | tr '\n' ':')$PATH"
