@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cval=$(/usr/bin/checkupdates|wc -l)
+
+icon=" &#xf3dd;"
+
+if [ "$cval" != "0" ]; then
+	full_text="$cval updates available. "
+else
+	full_text="System up to date. "
+fi
+
+printf "%s %s\\n" "$icon" "$full_text"

@@ -1,0 +1,9 @@
+command=~/.local/bin/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[arch-update]
+markup=pango
+interval=3600
+background=#5c828d
+color=#ffffff

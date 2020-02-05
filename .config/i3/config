@@ -213,16 +213,33 @@ bindsym $mod+r mode "resize"
 bar {
 	font pango: mono 9
 	colors {
-			background $color0
-			statusline $color12
-			separator $color12
-			focused_workspace  $color12 $color0 $color11
-        		active_workspace   $color0  $color0 $color11
-      			inactive_workspace $color0  $color0 $color3
-        		urgent_workspace   $color0  $color0 $color3
-		}
+		background $color0
+		statusline $color12
+		separator $color12
+		focused_workspace  $color12 $color0 $color11
+        	active_workspace   $color0  $color0 $color11
+      		inactive_workspace $color0  $color0 $color3
+        	urgent_workspace   $color0  $color0 $color3
+	}
 	status_command i3blocks -c ~/.config/i3blocks/conf
 	position top
+	mode dock
+	modifier None
+}
+
+bar {
+	font pango: mono 9
+	colors {
+		background $color0
+		statusline $color12
+		separator $color12
+		focused_workspace 	$color0 $color0 $color0
+		active_workspace 	$color0 $color0 $color0
+		inactive_workspace 	$color0 $color0 $color0
+		urgent_workspace 	$color0 $color0 $color0
+	}
+	status_command i3blocks -c ~/.config/i3blocks/conf2
+	position bottom
 	mode dock
 	modifier None
 }
