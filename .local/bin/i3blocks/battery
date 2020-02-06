@@ -42,12 +42,9 @@ elsif ($acpi !~ /: ([\w\s]+), (\d+)%/) {
 
 $status = $1;
 $percent = $2;
-$full_text = "$label$percent%";
-#if ($status eq 'Discharging') {
-#	$full_text .= '&#xf057;';
-#} elsif ($status eq 'Charging') {
-#	$full_text .= ' &#xf136;';
-#} elsif ($status eq 'Unknown') {
+$short_text = "$status $percent%";
+$full_text = "$status $percent%";
+#if ($status eq 'Unknown') {
 #	open (AC_ADAPTER, "acpi -a |") or die;
 #	$ac_adapt = <AC_ADAPTER>;
 #	close(AC_ADAPTER);
@@ -56,30 +53,32 @@ $full_text = "$label$percent%";
 #		$ac_adapt = $1;
 #
 #		if ($ac_adapt eq 'on-line') {
-#			$full_text .= " &#xf1e6;";
+#			#$full_text .= " &#xf1e6;";
 #		} elsif ($ac_adapt eq 'off-line') {
-#			$full_text .= '&#xf057;';
+#			#$full_text .= '&#xf057;';
 #		}
 #	}
+#} elsif ($status ne "Full") {
+#	$full_text .= " $status ";
 #}
 
-$short_text = $full_text;
+# $full_text .= "$percent%";
 
 if ($acpi =~ /(\d\d:\d\d):/) {
-	$full_text .= " ($1)";
+	$full_text .= "($1)";
 }
 
 # print icon
 if($percent < 20) {
-	$icon = "&#xf244;";
-} elsif ($percent < 40) {
 	$icon = "&#xf243;";
+} elsif ($percent < 40) {
+	$icon = "&#xf242;";
 } elsif ($percent < 60) {
-	$icon = "&#x242;";
+	$icon = "&#xf241;";
 } elsif ($percent < 85) {
 	$icon = "&#xf241;";
 } elsif ($percent > 85) {
-	$icon = "&#xf240;";
+	$icon = "&#xf211;";
 }
 
 # print text

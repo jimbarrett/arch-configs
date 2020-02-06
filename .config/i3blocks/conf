@@ -8,12 +8,10 @@ signal=10
 instance=Master
 
 [wifi]
-label=Wifi: 
 interval=10
 instance=wlp2s0
 
 [battery]
-label=Bat: 
 instance=1
 interval=30
 
