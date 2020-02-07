@@ -7,6 +7,7 @@
 
 alias ls='ls --color=auto --group-directories-first'
 alias lsa='ls -al --color=auto --group-directories-first'
+alias mdb='mysqlconnect'
 
 PS1='[\u@\h \W]\$ '
 
@@ -15,6 +16,7 @@ export WGETRC="$HOME/.config/wget/wgetrc"
 
 # set aliases
 alias nv="nvim"
+alias snv="sudo nvim"
 alias up="sudo pacman -Syu"
 
 # transparent xterm windows
