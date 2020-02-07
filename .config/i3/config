@@ -18,14 +18,13 @@ set $term --no-startup-id xterm
 set $mod Mod1
 
 # network manager (nmtui) 
-for_window [instance="nmtui"] floating enable
-for_window [instance="nmtui"] move position center
-for_window [instance="nmtui"] border pixel 5
+for_window [instance="nmtui"] floating enable move position center border pixel 5
 
 # pulsemixer window (volume control)
-for_window [instance="volume"] floating enable
-for_window [instance="volume"] move position center
-for_window [instance="volume"] border pixel 5
+for_window [instance="volume"] floating enable move position center border pixel 5
+
+# udpate window
+for_window [instance="update"] floating enable move position center border pixel 5
 
 # #---Starting External Scripts---# #
 # active sinle monitor

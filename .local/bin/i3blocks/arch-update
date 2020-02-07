@@ -1,5 +1,9 @@
 #!/bin/sh
 
+case $BLOCK_BUTTON in
+	1) st -n update -e sudo pacman -Syu &;;
+esac
+
 cval=$(/usr/bin/checkupdates|wc -l)
 
 icon=" &#xf0ab;"
