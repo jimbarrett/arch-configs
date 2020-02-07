@@ -9,7 +9,7 @@ instance=Master
 
 [wifi]
 interval=10
-instance=wlp2s0
+instance=wlp3s0
 
 [battery]
 instance=1
