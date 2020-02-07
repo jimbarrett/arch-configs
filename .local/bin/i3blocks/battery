@@ -42,8 +42,8 @@ elsif ($acpi !~ /: ([\w\s]+), (\d+)%/) {
 
 $status = $1;
 $percent = $2;
-$short_text = "$status $percent%";
-$full_text = "$status $percent%";
+$short_text = "$percent%";
+$full_text = "$percent%";
 #if ($status eq 'Unknown') {
 #	open (AC_ADAPTER, "acpi -a |") or die;
 #	$ac_adapt = <AC_ADAPTER>;
@@ -78,11 +78,11 @@ if($percent < 20) {
 } elsif ($percent < 85) {
 	$icon = "&#xf241;";
 } elsif ($percent > 85) {
-	$icon = "&#xf211;";
+	$icon = "&#xf240;";
 }
 
 # print text
-print "$full_text\n";
+print "$icon $full_text\n";
 print "$short_text\n";
 
 # consider color and urgent flag only on discharge
