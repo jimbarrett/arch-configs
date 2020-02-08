@@ -1,6 +1,11 @@
 command=~/.local/bin/i3blocks/$BLOCK_NAME
-separator_block_width=15
 markup=pango
+separator=false
+
+[notes-tracker]
+interval=once
+background=#dd3333
+color=#ffffff
 
 [arch-update]
 markup=pango
