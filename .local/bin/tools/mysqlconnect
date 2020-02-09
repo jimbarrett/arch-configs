@@ -4,8 +4,8 @@
 FILE=~/.cache/mysql/creds
 if [ -f "$FILE" ]; then
 	if dialog --yesno "Configuration file found. \\nDo you want to load credentials?" 10 60; then
-		username=$( cat "$FILE" | awk '/username/ {print $2}' )
-		pass=$( cat "$FILE" | awk '/password/ {print $2}' )
+		username=$( awk '/username/ {print $2}' "$FILE" )
+		pass=$( awk '/password/ {print $2}' "$FILE" )
 	fi
 fi
 
