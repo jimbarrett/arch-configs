@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) xterm -n mysqlconnect -e mysqlconnect &;;
+esac
+
+icon="&#xf1c0;"
+
+printf "%s %s\\n" " $icon " "MySQL "

@@ -2,9 +2,14 @@ command=~/.local/bin/i3blocks/$BLOCK_NAME
 markup=pango
 separator=false
 
+[mysql-connect]
+interval=once
+background=#3e646f
+color=#ffffff
+
 [notes-tracker]
 interval=once
-background=#dd3333
+background=#807171
 color=#ffffff
 
 [arch-update]

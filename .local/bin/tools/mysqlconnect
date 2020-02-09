@@ -1,6 +1,25 @@
 #!/bin/sh
 
-username=$(dialog --inputbox "DB username" 10 60 3>&1 1>&2 2>&3 3>&1) || exit
-pass=$(dialog --passwordbox "DB password" 10 60 3>&1 1>&2 2>&3 3>&1)
+# do we have a config file?
+FILE=~/.cache/mysql/creds
+if [ -f "$FILE" ]; then
+	if dialog --yesno "Configuration file found. \\nDo you want to load credentials?" 10 60; then
+		username=$( cat "$FILE" | awk '/username/ {print $2}' )
+		pass=$( cat "$FILE" | awk '/password/ {print $2}' )
+	fi
+fi
 
-mysql -u $username -p$pass
+if [[ ! -v username ]]; then
+	username=$(dialog --inputbox "DB username" 10 60 3>&1 1>&2 2>&3 3>&1) || exit
+	pass=$(dialog --passwordbox "DB password" 10 60 3>&1 1>&2 2>&3 3>&1)
+	if dialog --yesno "Do you want to save connection settings?" 10 60; then
+		echo "username $username" > $FILE
+		echo "password $pass" >> $FILE
+	fi
+fi
+
+if mysql -u $username -p$pass; then
+	hello="world"
+else
+	dialog --msgbox "Failed to connect" 7 40
+fi
