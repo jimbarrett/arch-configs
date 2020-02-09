@@ -4,4 +4,4 @@ case $BLOCK_BUTTON in
 	1) xterm -n notes -e nvim ~/documents/notes/notes
 esac
 
-echo ' NOTES '
+echo " &#xf15c; Notes "
