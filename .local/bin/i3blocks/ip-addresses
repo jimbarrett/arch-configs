@@ -1,0 +1,13 @@
+#!/bin/sh
+
+local=$(ip route get 1 | awk '{print $7}')
+public=$(curl ifconfig.me)
+
+icon="&#xf012;"
+
+full_text="$local / $public"
+short_text=$full_text
+
+echo "$icon $full_text"
+echo "$icon $short_text"
+echo "#55aa55"

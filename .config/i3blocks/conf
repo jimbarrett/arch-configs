@@ -7,6 +7,9 @@ interval=once
 signal=10
 instance=Master
 
+[ip-addresses]
+interval=30
+
 [wifi]
 interval=10
 instance=wlp3s0
