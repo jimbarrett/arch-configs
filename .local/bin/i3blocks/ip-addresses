@@ -10,4 +10,4 @@ short_text=$full_text
 
 echo "$icon $full_text"
 echo "$icon $short_text"
-echo "#55aa55"
+echo ""
