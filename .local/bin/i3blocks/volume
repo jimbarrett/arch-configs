@@ -22,5 +22,4 @@ else
 	icon="&#xf027; "
 fi
 
-#printf "%s %s%%\\n" "&#1F509" "$vol"
 printf "%s %s\\n" "$icon " "$vol"

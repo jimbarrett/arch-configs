@@ -26,11 +26,11 @@ echo "$icon $QUALITY%" # short text
 
 # color
 if [[ $QUALITY -ge 80 ]]; then
-    echo "#b0aba8"
+    echo "#98971a"
 elif [[ $QUALITY -lt 80 ]]; then
-    echo "#85aab6"
+    echo "#d79921"
 elif [[ $QUALITY -lt 60 ]]; then
-    echo "#90a996"
+    echo "#fabd2f"
 elif [[ $QUALITY -lt 40 ]]; then
-    echo "#7e6565"
+    echo "#cc241d"
 fi

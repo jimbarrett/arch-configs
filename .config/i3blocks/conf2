@@ -4,16 +4,16 @@ separator=false
 
 [mysql-connect]
 interval=once
-background=#3e646f
+background=#458588
 color=#ffffff
 
 [notes-tracker]
 interval=once
-background=#807171
+background=#cc241d
 color=#ffffff
 
 [arch-update]
 markup=pango
 interval=3600
-background=#5c828d
+background=#689d6a
 color=#ffffff

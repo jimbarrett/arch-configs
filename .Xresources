@@ -2,37 +2,13 @@
 st.alpha: 230
 !! Set a default font and font size as below:
 #*.font: Hack-12;
-*.background:		#1c1c22
-*.foreground:		#b0aba8
-!! black
-*.color0:		#313131
-*.color8:		#434343
-!! red
-*.color1:		#7e6565
-*.color9:		#807171
-!! green
-*.color2:		#85aab6
-*.color10:		#3e646f
-!! yellow
-*.color3:		#90a996
-*.color11:		#badbc2
-!! blue
-*.color4:		#3e646f
-*.color12:		#5c828d
-!! magenta
-*.color5:		#817f98
-*.color13:		#9b98b7
-!! cyan
-*.color6:		#9aa7c0
-*.color14:		#b2b7c0
-!! white
-*.color7:		#b0aba8
-*.color15:		#d9d6ca
 
-rofi.color-window: argb:dd1c1c22, #3e646f, #3e646f
-rofi.color-normal: argb:8c1c1c22, #bcbcbc, argb:961c1c22, #3e646f, #bcbcbc
-rofi.color-urgent: argb:8c1c1c22, #bcbcbc, argb:961c1c22, #3e646f, #bcbcbc
-rofi.color-active: argb:8c1c1c22, #bcbcbc, argb:961c1c22, #3e646f, #bcbcbc
+#include ".xcolors/gruvbox-dark"
+
+rofi.color-window: argb:dd282828, #d79921, #d79921
+rofi.color-normal: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
+rofi.color-urgent: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
+rofi.color-active: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
 rofi.width: 100
 rofi.lines: 5
 rofi.columns: 1

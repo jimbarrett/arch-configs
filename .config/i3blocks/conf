@@ -6,9 +6,11 @@ markup=pango
 interval=once
 signal=10
 instance=Master
+color=#a89984
 
 [ip-addresses]
 interval=30
+color=#a89984
 
 [wifi]
 interval=10
@@ -20,3 +22,4 @@ interval=30
 
 [clock]
 interval=1
+color=#a89984
