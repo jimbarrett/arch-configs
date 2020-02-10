@@ -1,0 +1,27 @@
+#!/bin/sh
+
+FILE=~/.cache/connections/list
+
+listcons() {
+	dialog --title "Available Connections" --msgbox "$(awk '{print NR " " $1}' $FILE)" 10 40
+}
+
+while getopts ":l" o; do case "${o}" in
+	l) listcons && exit
+esac done
+
+
+
+if [[ -z "$1" ]]; then
+	dialog --msgbox "Connection name required." 7 40
+	exit
+fi
+
+params=$(awk '/'"$1"'/ {print $2}' "$FILE")
+
+if [[ -z "$params" ]]; then
+	dialog --msgbox "Connection not found." 7 40
+	exit
+else
+	ssh -o ConnectTimeout=10 -o ConnectionAttempts=1 "$params"
+fi
