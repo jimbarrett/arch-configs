@@ -2,22 +2,31 @@
 
 FILE=~/.cache/connections/list
 
-listcons() {
-	dialog --title "Available Connections" --msgbox "$(awk '{print NR " " $1}' $FILE)" 10 40
+selectcon() {
+	PS3='Select a connection: '
+	options=($(awk '{print $1}' $FILE))
+	select opt in "${options[@]}"
+	do
+		con=$opt
+		break
+	done
 }
 
-while getopts ":l" o; do case "${o}" in
-	l) listcons && exit
+while getopts ":l:s" o; do case "${o}" in
+	s) selectcon ;;
 esac done
 
+if [[ -z "$con" ]]; then
+	con=$1
+fi
 
 
-if [[ -z "$1" ]]; then
+if [[ -z "$con" ]]; then
 	dialog --msgbox "Connection name required." 7 40
 	exit
 fi
 
-params=$(awk '/'"$1"'/ {print $2}' "$FILE")
+params=$(awk '/'"$con"'/ {print $2}' "$FILE")
 
 if [[ -z "$params" ]]; then
 	dialog --msgbox "Connection not found." 7 40

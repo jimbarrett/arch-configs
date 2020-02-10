@@ -2,6 +2,11 @@ command=~/.local/bin/i3blocks/$BLOCK_NAME
 markup=pango
 separator=false
 
+[ssh-connect]
+interval=3600
+background=#b16286
+color=#ffffff
+
 [mysql-connect]
 interval=once
 background=#458588

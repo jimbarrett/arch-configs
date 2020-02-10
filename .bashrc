@@ -8,6 +8,7 @@
 alias ls='ls --color=auto --group-directories-first'
 alias lsa='ls -al --color=auto --group-directories-first'
 alias mdb='mysqlconnect'
+alias ss='sshconnect'
 
 PS1='[\u@\h \W]\$ '
 
