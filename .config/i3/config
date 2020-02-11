@@ -5,7 +5,7 @@ gaps outer 5
 set $term --no-startup-id xterm
 set $mod Mod1
 
-# network manager (nmtui) 
+# network manager (nmtui)
 for_window [instance="nmtui"] floating enable move position center border pixel 5
 
 # pulsemixer window (volume control)
@@ -206,9 +206,9 @@ bar {
 		statusline $color7
 		separator $color7
 		focused_workspace  $color3 $color0 $color11
-        	active_workspace   $color0  $color0 $color15
-      		inactive_workspace $color0  $color0 $color15
-        	urgent_workspace   $color0  $color0 $color15
+		active_workspace   $color0  $color0 $color15
+		inactive_workspace $color0  $color0 $color15
+		urgent_workspace   $color0  $color0 $color15
 	}
 	status_command i3blocks -c ~/.config/i3blocks/conf
 	position top

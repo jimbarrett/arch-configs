@@ -1,0 +1,5 @@
+alias ls='ls --color=auto --group-directories-first'
+alias lsa='ls -al --color=auto --group-directories-first'
+alias nv="nvim"
+alias snv="sudo nvim"
+

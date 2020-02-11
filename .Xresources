@@ -3,10 +3,10 @@ st.alpha: 230
 !! Set a default font and font size as below:
 #*.font: Hack-12;
 
-#include ".xcolors/gruvbox-dark"
+#include ".xcolors/baskerville-lost-woods"
 
 rofi.color-window: argb:dd282828, #d79921, #d79921
-rofi.color-normal: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
+rofi.color-normal: argb:8c282828, #ffffff, argb:96282828, #d79921, #ffffff
 rofi.color-urgent: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
 rofi.color-active: argb:8c282828, #bcbcbc, argb:96282828, #d79921, #bcbcbc
 rofi.width: 100
