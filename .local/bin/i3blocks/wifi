@@ -25,12 +25,12 @@ echo "$icon $NETWORK $QUALITY%" # full text
 echo "$icon $QUALITY%" # short text
 
 # color
-if [[ $QUALITY -ge 80 ]]; then
-    echo "#98971a"
-elif [[ $QUALITY -lt 80 ]]; then
-    echo "#d79921"
-elif [[ $QUALITY -lt 60 ]]; then
-    echo "#fabd2f"
-elif [[ $QUALITY -lt 40 ]]; then
-    echo "#cc241d"
-fi
+#if [[ $QUALITY -ge 80 ]]; then
+#    echo "#98971a"
+#elif [[ $QUALITY -lt 80 ]]; then
+#    echo "#d79921"
+#elif [[ $QUALITY -lt 60 ]]; then
+#    echo "#fabd2f"
+#elif [[ $QUALITY -lt 40 ]]; then
+#    echo "#cc241d"
+#fi
