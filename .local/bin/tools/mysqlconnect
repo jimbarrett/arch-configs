@@ -1,24 +1,24 @@
 #!/bin/sh
 
-# do we have a config file?
-FILE=~/.cache/mysql/creds
-if [ -f "$FILE" ]; then
-	if dialog --yesno "Configuration file found. \\nDo you want to load credentials?" 10 60; then
-		username=$( awk '/username/ {print $2}' "$FILE" )
-		pass=$( awk '/password/ {print $2}' "$FILE" )
-	fi
-fi
+FILE=~/.cache/connections/mysql
 
-if [[ ! -v username ]]; then
-	username=$(dialog --inputbox "DB username" 10 60 3>&1 1>&2 2>&3 3>&1) || exit
-	pass=$(dialog --passwordbox "DB password" 10 60 3>&1 1>&2 2>&3 3>&1)
-	if dialog --yesno "Do you want to save connection settings?" 10 60; then
-		echo "username $username" > $FILE
-		echo "password $pass" >> $FILE
-	fi
-fi
+[[ ! -f "$FILE" ]] && exit
 
-if mysql -u $username -p$pass; then
+PS3='Select a connection: '
+options=($(awk '{print $1}' $FILE))
+select opt in "${options[@]}"
+do
+	con=$opt
+	break
+done
+
+username=$( awk '/'"$con"'/ {print $2}' "$FILE")
+password=$( awk '/'"$con"'/ {print $3}' "$FILE")
+host=$( awk '/'"$con"'/ {print $4}' "$FILE")
+
+[[ -z "$host" ]] && host='localhost'
+
+if mysql -h $host -u $username -p$password; then
 	hello="world"
 else
 	dialog --msgbox "Failed to connect" 7 40

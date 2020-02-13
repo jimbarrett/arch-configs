@@ -1,5 +1,9 @@
 #!/bin/sh
 
+FILE=~/.cache/connections/mysql
+
+[[ ! -f "$FILE" ]] && exit
+
 case $BLOCK_BUTTON in
 	1) xterm -e mysqlconnect &;;
 esac
