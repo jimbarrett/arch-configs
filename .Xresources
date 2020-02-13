@@ -1,9 +1,9 @@
 !! Transparency (0-255):
 st.alpha: 230
 !! Set a default font and font size as below:
-#*.font: Hack-12;
+!! *.font: Hack-12;
 
-#include ".xcolors/baskerville-lost-woods"
+#include ".xcolors/nord"
 
 rofi.color-window: argb:dd282828, #d79921, #d79921
 rofi.color-normal: argb:8c282828, #ffffff, argb:96282828, #d79921, #ffffff
