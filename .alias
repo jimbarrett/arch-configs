@@ -3,3 +3,5 @@ alias lsa='ls -al --color=auto --group-directories-first'
 alias nv="nvim"
 alias snv="sudo nvim"
 
+alias csvpn='sudo openvpn --config ~/.cache/ovpn/carestar/client.ovpn --auth-user-pass ~/.cache/ovpn/carestar/creds'
+

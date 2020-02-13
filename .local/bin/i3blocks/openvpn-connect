@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) xterm -e openvpnconnect -H &;;
+esac
+
+# TODO: find out if we are connected ??
+
+icon="&#xf140;"
+
+printf " %s %s \\n" "$icon" "OpenVPN"

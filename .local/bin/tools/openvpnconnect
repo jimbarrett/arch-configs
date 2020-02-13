@@ -1,0 +1,24 @@
+#!/bin/sh
+
+FILE=~/.cache/connections/openvpn
+
+selectcon() {
+	PS3='Select a connection: '
+	options=($(awk '{print $1}' $FILE))
+	select opt in "${options[@]}"
+	do
+		con=$opt
+		break
+	done
+}
+
+selectcon
+
+config=$(awk '/'"$con"'/ {print $2}' "$FILE")
+auths=$(awk '/'"$con"'/ {print $3}' "$FILE")
+
+dialog --msgbox "$config" 7 40
+dialog --msgbox "$auths" 7 40
+
+openvpn --config "$config" --auth-user-pass "$auths" &
+
