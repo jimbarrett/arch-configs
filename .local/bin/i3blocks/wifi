@@ -4,33 +4,17 @@ case $BLOCK_BUTTON in
 	1) st -n nmtui -e nmtui ;;
 esac
 
-#------------------------------------------------------------------------
 
-INTERFACE="${BLOCK_INSTANCE:-wlan0}"
-
-#------------------------------------------------------------------------
-
-# As per #36 -- It is transparent: e.g. if the machine has no battery or wireless
-# connection (think desktop), the corresponding block should not be displayed.
-#[[ ! -d /sys/class/net/${INTERFACE}/wireless ]] ||
-#    [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
+INTERFACE="$(iwgetid | awk '{print $1}')"
 
 icon="&#xf1eb;"
 
-#------------------------------------------------------------------------
 NETWORK='('$(iwgetid | grep -o '".*"' | sed 's/"//g')')'' '
 QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
-#------------------------------------------------------------------------
-echo "$icon $NETWORK $QUALITY%" # full text
-echo "$icon $QUALITY%" # short text
 
-# color
-#if [[ $QUALITY -ge 80 ]]; then
-#    echo "#98971a"
-#elif [[ $QUALITY -lt 80 ]]; then
-#    echo "#d79921"
-#elif [[ $QUALITY -lt 60 ]]; then
-#    echo "#fabd2f"
-#elif [[ $QUALITY -lt 40 ]]; then
-#    echo "#cc241d"
-#fi
+if [ -z "$QUALITY" ]; then
+	echo "$icon Not Connected"
+else
+	echo "$icon $NETWORK $QUALITY%" # full text
+	echo "$icon $QUALITY%" # short text
+fi

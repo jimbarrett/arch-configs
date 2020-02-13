@@ -5,6 +5,8 @@ public=$(curl ifconfig.me)
 
 icon="&#xf012;"
 
+[[ -z "$public" ]] && exit
+
 full_text="$local / $public"
 short_text=$full_text
 
