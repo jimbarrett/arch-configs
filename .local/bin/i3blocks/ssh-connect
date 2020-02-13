@@ -4,7 +4,7 @@ case $BLOCK_BUTTON in
 	1) xterm -e sshconnect -s &;;
 esac
 
-FILE=~/.cache/connections/list
+FILE=~/.cache/connections/ssh
 
 count=$(awk 'END { print NR }' $FILE)
 

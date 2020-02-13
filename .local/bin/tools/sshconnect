@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE=~/.cache/connections/list
+FILE=~/.cache/connections/ssh
 
 selectcon() {
 	PS3='Select a connection: '
