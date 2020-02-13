@@ -2,10 +2,10 @@ command=~/.local/bin/i3blocks/$BLOCK_NAME
 markup=pango
 separator=false
 
-[openvpn-connect]
-interval=3600
-background=#d79921
-color=#ffffff
+#[openvpn-connect]
+#interval=3600
+#background=#d79921
+#color=#ffffff
 
 [ssh-connect]
 interval=3600
