@@ -2,6 +2,7 @@ let g:netrw_dirhistmax = 0
 
 set shada="NONE"
 set number
+set clipboard+=unnamedplus
 
 call plug#begin()
 
