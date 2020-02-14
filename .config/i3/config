@@ -1,21 +1,18 @@
 # Needed for i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+gaps inner 2
+gaps outer 2
 set $term --no-startup-id xterm
 set $mod Mod1
 
 # network manager (nmtui)
-for_window [instance="nmtui"] floating enable move position center border pixel 5
-
+for_window [instance="nmtui"] fullscreen enable
 # pulsemixer window (volume control)
-for_window [instance="volume"] floating enable move position center border pixel 5
-
+for_window [instance="volume"] fullscreen enable
 # udpate window
-for_window [instance="update"] floating enable move position center border pixel 5
-
+for_window [instance="update"] fullscreen enable
 # notes window
-for_window [instance="notes"] floating enable move position center border pixel 5
+for_window [instance="notes"] fullscreen enable
 
 # #---Starting External Scripts---# #
 # Setting the background:
