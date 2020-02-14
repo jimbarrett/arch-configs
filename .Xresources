@@ -21,4 +21,4 @@ rofi.hide-scrollbar`: true
 xterm*faceName: Hack
 xterm*faceSize: 10
 xterm*loginshell: true
-xterm*termName: xterm-color
+xterm*termName: xterm-256color
