@@ -1,7 +1,5 @@
 !! Transparency (0-255):
 st.alpha: 230
-!! Set a default font and font size as below:
-!! *.font: Hack-12;
 
 #include ".xcolors/nord"
 
@@ -22,3 +20,4 @@ xterm*faceName: Hack
 xterm*faceSize: 10
 xterm*loginshell: true
 xterm*termName: xterm-256color
+xterm*selectToClipboard: true
