@@ -2,6 +2,7 @@
 
 case $BLOCK_BUTTON in
 	1) xterm -n displays -e arandr &;;
+	2) xterm -e selectlayout ;;
 esac
 
 icon="&#xf26c;"
