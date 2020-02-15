@@ -22,6 +22,11 @@ interval=once
 background=#cc241d
 color=#ffffff
 
+[displays]
+interval=once
+background=#98971a
+color=#ffffff
+
 [arch-update]
 markup=pango
 interval=3600
