@@ -1,9 +1,8 @@
 #!/bin/sh
 
 case $BLOCK_BUTTON in
-	1) xterm -n displays -e arandr &;;
-	2) xterm -e selectlayout ;;
-	3) xterm -e selectlayout ;;
+	1) xterm -e selectlayout ;;
+	3) xterm -n displays -e arandr &;;
 esac
 
 icon="&#xf26c;"
