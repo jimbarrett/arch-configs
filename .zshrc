@@ -19,8 +19,7 @@ SAVEHIST=10000
 setopt appendhistory autocd nomatch notify
 unsetopt beep
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
 zstyle :compinstall filename '/home/jim/.zshrc'
 
 autoload -Uz compinit
