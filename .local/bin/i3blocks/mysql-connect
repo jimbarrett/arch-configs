@@ -5,7 +5,7 @@ FILE=~/.cache/connections/mysql
 [[ ! -f "$FILE" ]] && exit
 
 case $BLOCK_BUTTON in
-	1) xterm -e mysqlconnect &;;
+	1) st -e mysqlconnect &;;
 esac
 
 icon="&#xf1c0;"
