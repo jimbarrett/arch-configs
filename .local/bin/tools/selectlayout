@@ -1,15 +1,13 @@
 #!/bin/sh
 
-FILE=~/.cache/screenlayouts/config
+LAYOUTS=$(ls "$HOME/.screenlayout")
 
 PS3='Select a layout: '
-options=($(awk '{print $1}' $FILE))
+options=($LAYOUTS)
 select opt in "${options[@]}"
 do
 	layout=$opt
 	break
 done
 
-seld=$(grep -Po "$layout \K[^\"]+" "$FILE")
-
-xterm -e "$seld"
+exec "$HOME/.screenlayout/$opt"
