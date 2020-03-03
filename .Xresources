@@ -1,7 +1,7 @@
 !! Transparency (0-255):
 st.alpha: 230
 
-#include ".xcolors/nord"
+#include ".xcolors/materialdark"
 
 rofi.color-window: argb:dd282828, #d79921, #d79921
 rofi.color-normal: argb:8c282828, #ffffff, argb:96282828, #d79921, #ffffff
