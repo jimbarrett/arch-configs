@@ -1,8 +1,8 @@
 # Needed for i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 2
-gaps outer 2
-set $term --no-startup-id st
+gaps inner 10
+gaps outer 10
+set $term --no-startup-id xterm
 set $mod Mod1
 
 # network manager (nmtui)
