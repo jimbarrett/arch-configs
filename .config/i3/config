@@ -50,11 +50,11 @@ set_from_resource $color14	color14
 set_from_resource $color15	color15
 
 #                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
-client.focused		$color12	$background	$foreground	$color2			$color2
-client.unfocused	$color7		$background	$foreground	$color4			$color4
-client.focused_inactive	$color7		$background	$foreground	$color4			$color4
-client.urgent		$color7		$background	$foreground	$color4			$color4
-client.background $background
+client.focused		$color12	$background	$foreground	$color2			$color3
+client.unfocused	$color7		$background	$foreground	$color4			$color0
+client.focused_inactive	$color7		$background	$foreground	$color4			$color0
+client.urgent		$color7		$background	$foreground	$color4			$color0
+client.background $color8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -118,7 +118,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -165,7 +165,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Really exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Really exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -197,12 +198,13 @@ bindsym $mod+r mode "resize"
 bar {
 	colors {
 		background $color0
+		#statusline $color7
 		statusline $color7
 		separator $color7
-		focused_workspace  $color3 $color0 $color11
-		active_workspace   $color0  $color0 $color15
-		inactive_workspace $color0  $color0 $color15
-		urgent_workspace   $color0  $color0 $color15
+		focused_workspace  $color10 $color0 $color10
+		active_workspace   $color0  $color0 $color10
+		inactive_workspace $color0  $color0 $color11
+		urgent_workspace   $color0  $color0 $color11
 	}
 	status_command i3blocks -c ~/.config/i3blocks/conf
 	position top
