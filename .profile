@@ -11,7 +11,7 @@ export SHELL=/bin/zsh
 # default programs
 export EDITOR="nvim"
 export TERMINAL="xterm"
-export BROWSER="brave"
+export BROWSER="google-chrome"
 export FILE="ranger"
 
 # clean up stuff
