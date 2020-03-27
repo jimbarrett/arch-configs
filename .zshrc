@@ -20,12 +20,10 @@ setopt appendhistory autocd nomatch notify
 unsetopt beep
 bindkey -e
 
-zstyle :compinstall filename '/home/jim/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
 
-export NVM_DIR="$HOME/.local/share/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
