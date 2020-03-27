@@ -11,3 +11,4 @@ do
 done
 
 exec "$HOME/.screenlayout/$opt"
+exec setbg
