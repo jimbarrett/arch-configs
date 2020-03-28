@@ -17,6 +17,7 @@ export FILE="ranger"
 # clean up stuff
 export WGETRC="$HOME/.config/wget/wgetrc"
 export LESSHISTFILE="-"
+export ZDOTDIR="$HOME/.config/zsh"
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	eval `ssh-agent -s`
