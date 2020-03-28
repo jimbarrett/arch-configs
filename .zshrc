@@ -5,6 +5,9 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # load aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+# load custom dircolors
+eval $(dircolors -b ~/.config/.dir_colors)
+
 # include hidden files in autocomplete
 _comp_options+=(globdots)
 
@@ -24,6 +27,3 @@ zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
-
-
-
