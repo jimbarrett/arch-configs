@@ -5,14 +5,8 @@ gaps outer 10
 set $term --no-startup-id xterm
 set $mod Mod1
 
-# network manager (nmtui)
-for_window [instance="nmtui"] fullscreen enable
-# pulsemixer window (volume control)
-for_window [instance="volume"] fullscreen enable
-# udpate window
-for_window [instance="update"] fullscreen enable
-# notes window
-for_window [instance="notes"] fullscreen enable
+# some windows should be fullscreen
+for_window [class="fullscreen"] fullscreen enable
 
 # #---Starting External Scripts---# #
 # Setting the background:
