@@ -42,3 +42,6 @@
 !*.colorBD:     #b7141f
 !*.colorIT:
 !*.colorUL:
+
+*.gray100:	#121212
+*.testing:	#ff00ff

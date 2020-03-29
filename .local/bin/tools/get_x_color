@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# if first option sent, find it.
+[ ! -z "$1" ] && color="$(xrdb -query | awk 'match($0, /\y'"$1"'\y/) {print $2}')"
+# if first not found and second sent, find second.
+[ -z "$color" ] && [ ! -z "$2" ] && color="$(xrdb -query | awk 'match($0, /\y'"$2"'\y/) {print $2}')"
+# none found, return white
+[ -z "$color" ] && color="#ffffff"
+
+
+echo $color

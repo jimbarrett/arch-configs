@@ -7,28 +7,28 @@ separator=false
 #background=#d79921
 #color=#ffffff
 
-[ssh-connect]
-interval=3600
-background=#b16286
-color=#ffffff
+#[ssh-connect]
+#interval=3600
+#background=#b16286
+#color=#ffffff
 
-[mysql-connect]
-interval=once
-background=#458588
-color=#ffffff
+#[mysql-connect]
+#interval=once
+#background=#458588
+#color=#ffffff
 
 [notes-tracker]
 interval=once
-background=#cc241d
-color=#ffffff
+#background=#cc241d
+#color=#ffffff
 
 [displays]
 interval=once
-background=#98971a
-color=#ffffff
+#background=#98971a
+#color=#ffffff
 
 [arch-update]
 markup=pango
 interval=3600
-background=#689d6a
-color=#ffffff
+#background=#689d6a
+#color=#ffffff

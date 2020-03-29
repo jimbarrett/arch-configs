@@ -193,8 +193,8 @@ bar {
 	colors {
 		background $color0
 		#statusline $color7
-		statusline $color7
-		separator $color7
+		statusline $color11
+		separator $color11
 		focused_workspace  $color10 $color0 $color10
 		active_workspace   $color0  $color0 $color10
 		inactive_workspace $color0  $color0 $color11
@@ -209,16 +209,15 @@ bar {
 bar {
 	colors {
 		background $color0
-		statusline $color12
-		separator $color12
-		focused_workspace 	$color0 $color0 $color0
-		active_workspace 	$color0 $color0 $color0
-		inactive_workspace 	$color0 $color0 $color0
-		urgent_workspace 	$color0 $color0 $color0
+		statusline $color11
+		separator $color11
+		focused_workspace  $color0 $color0 $color0
+		active_workspace   $color0  $color0 $color0
+		inactive_workspace $color0  $color0 $color0
+		urgent_workspace   $color0  $color0 $color0
 	}
 	status_command i3blocks -c ~/.config/i3blocks/conf2
 	position bottom
 	mode dock
 	modifier None
 }
-

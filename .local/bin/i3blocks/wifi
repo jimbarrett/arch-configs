@@ -11,10 +11,17 @@ icon="&#xf1eb;"
 
 NETWORK='('$(iwgetid | grep -o '".*"' | sed 's/"//g')')'' '
 QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
-
 if [ -z "$QUALITY" ]; then
 	echo "$icon Not Connected"
+	echo "$icon "
 else
 	echo "$icon $NETWORK $QUALITY%" # full text
 	echo "$icon $QUALITY%" # short text
 fi
+
+if [ "$QUALITY" -lt 50 ]; then
+	echo "$(get_x_color red500 color1)"
+else 
+	echo "$(get_x_color green500 color2)"
+fi
+

@@ -5,3 +5,5 @@ case $BLOCK_BUTTON in
 esac
 
 echo " &#xf15c; Notes "
+echo " &#xf15c; "
+echo "$(get_x_color teal500 color10)"
