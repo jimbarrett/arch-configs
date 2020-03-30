@@ -193,12 +193,12 @@ bar {
 	colors {
 		background $color0
 		#statusline $color7
-		statusline $color11
-		separator $color11
-		focused_workspace  $color10 $color0 $color10
-		active_workspace   $color0  $color0 $color10
-		inactive_workspace $color0  $color0 $color11
-		urgent_workspace   $color0  $color0 $color11
+		statusline $color3
+		separator $color3
+		focused_workspace  $color3 $color0 $color3
+		active_workspace   $color0  $color0 $color3
+		inactive_workspace $color0  $color0 $color10
+		urgent_workspace   $color0  $color0 $color10
 	}
 	status_command i3blocks -c ~/.config/i3blocks/conf
 	position top

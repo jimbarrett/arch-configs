@@ -7,8 +7,6 @@ esac
 
 icon="&#xf26c;"
 
-color=$(xrdb -query | awk '/purple800/ {print $2}')
-
 printf " %s %s \\n" "$icon" "Displays"
 printf " %s \\n" "Displays"
-echo "$(get_x_color orange400 color11)"
+echo "$(get_x_color orange400 color3)"
