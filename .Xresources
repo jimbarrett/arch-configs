@@ -1,4 +1,4 @@
-#include ".xcolors/tailwind"
+#include ".xcolors/gruvbox-dark"
 
 rofi.color-window: argb:dd282828, #d79921, #d79921
 rofi.color-normal: argb:8c282828, #ffffff, argb:96282828, #d79921, #ffffff
