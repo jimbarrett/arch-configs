@@ -1,7 +1,7 @@
 # Needed for i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 5
 set $term --no-startup-id xterm
 set $mod Mod1
 
@@ -200,24 +200,8 @@ bar {
 		inactive_workspace $color0  $color0 $color10
 		urgent_workspace   $color0  $color0 $color10
 	}
-	status_command i3blocks -c ~/.config/i3blocks/conf
+	status_command i3status
 	position top
-	mode dock
-	modifier None
-}
-
-bar {
-	colors {
-		background $color0
-		statusline $color11
-		separator $color11
-		focused_workspace  $color0 $color0 $color0
-		active_workspace   $color0  $color0 $color0
-		inactive_workspace $color0  $color0 $color0
-		urgent_workspace   $color0  $color0 $color0
-	}
-	status_command i3blocks -c ~/.config/i3blocks/conf2
-	position bottom
 	mode dock
 	modifier None
 }

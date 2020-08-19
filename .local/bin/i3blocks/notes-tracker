@@ -1,9 +1,0 @@
-#!/bin/sh
-
-case $BLOCK_BUTTON in
-	1) xterm -n notes -class fullscreen -e nvim ~/documents/notes/notes
-esac
-
-echo " &#xf15c; Notes "
-echo " &#xf15c; "
-echo "$(get_x_color teal500 color10)"
