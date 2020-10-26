@@ -12,8 +12,10 @@ rofi.eh: 2
 rofi.hide-scrollbar`: true
 rofi.fullscreen : true
 
-xterm*faceName: Hack
-xterm*faceSize: 10
-xterm*loginshell: true
-xterm*termName: xterm-256color
-xterm*selectToClipboard: true
+!urxvt
+
+URxvt*borderless: 1
+URxvt*scrollBar: false
+URxvt*loginShell: true
+URxvt.font: xft:Hack:size=10
+URxvt.letterSpace: -1
