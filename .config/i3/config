@@ -2,7 +2,7 @@
 for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 10
-set $term --no-startup-id xterm
+set $term --no-startup-id urxvt
 set $mod Mod1
 
 # some windows should be fullscreen
