@@ -5,7 +5,7 @@ FILE=~/.cache/connections/openvpn
 [[ ! -f "$FILE" ]] && exit
 
 case $BLOCK_BUTTON in
-	1) xterm -e openvpnconnect &;;
+	1) urxvt -e openvpnconnect &;;
 esac
 
 # TODO: find out if we are connected ??
