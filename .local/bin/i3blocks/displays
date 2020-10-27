@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case $BLOCK_BUTTON in
-	1) xterm -class fullscreen -e selectlayout ;;
-	3) xterm -e arandr ;;
+	1) urxvt -class fullscreen -e selectlayout ;;
+	3) urxvt -e arandr ;;
 esac
 
 icon="&#xf26c;"
