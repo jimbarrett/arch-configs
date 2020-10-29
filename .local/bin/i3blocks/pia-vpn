@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) urxvt -e pia-connect ;;
+	3) urxvt -e piactl logout && pkill -RTMIN+10 i3blocks ;; 
+esac
+
+status=$(piactl get connectionstate)
+icon=" &#xf288;"
+color=$(get_x_color color9)
+
+printf "%s %s\\n" "$icon" "$status"
+printf "%s %s\\n" "$icon" "$status"
+echo "$color"
