@@ -15,6 +15,8 @@ exec --no-startup-id setbg
 exec --no-startup-id dunst
 # start compton
 exec --no-startup-id compton
+#network manager applet
+exec --no-startup-id nm-applet
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
