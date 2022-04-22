@@ -208,18 +208,3 @@ bar {
 	modifier None
 }
 
-bar {
-	colors {
-		background $color0
-		statusline $color11
-		separator $color11
-		focused_workspace  $color0 $color0 $color0
-		active_workspace   $color0  $color0 $color0
-		inactive_workspace $color0  $color0 $color0
-		urgent_workspace   $color0  $color0 $color0
-	}
-	status_command i3blocks -c ~/.config/i3blocks/conf2
-	position bottom
-	mode dock
-	modifier None
-}

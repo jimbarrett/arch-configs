@@ -7,9 +7,8 @@ interval=once
 signal=10
 instance=Master
 
-[pia-vpn]
-interval=30
-signal=10
+[displays]
+interval=once
 
 [ip-addresses]
 interval=30
