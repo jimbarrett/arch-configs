@@ -15,7 +15,7 @@ exec --no-startup-id setbg
 exec --no-startup-id dunst
 # start compton
 exec --no-startup-id compton
-#network manager applet
+# network-manager-applet
 exec --no-startup-id nm-applet
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -61,8 +61,8 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# open rofi
-bindsym $mod+d exec rofi -show run
+# open dmenu
+bindsym $mod+d exec dmenu_run
 
 # pulsemixer audio controls
 bindsym $mod+Shift+m exec pulsemixer --toggle-mute
