@@ -1,7 +1,0 @@
-#!/bin/sh
-
-piactl login ~/pia-login 
-
-piactl connect &&
-
-pkill -RTMIN+10 i3blocks

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-chmod 700 ~/.config/.ssh
-chmod 600 ~/.config/.ssh/*_rsa
-chmod 644 ~/.config/.ssh/*_rsa.pub
